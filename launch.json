@@ -1,7 +1,7 @@
 {
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -23,13 +23,13 @@
                 }
             ],
             "preLaunchTask": "g++ build active file (debug)",
-            "miDebuggerPath": "D:\\CPP\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "path\\to\\your\\gdb",            // Change this path to your gdb path
         },
         {
             "name": "Launch without debuging",
             "type": "cppdbg",
             "request": "launch",
-            "program": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+            "program": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",    // Change this path to your pwsh or powershell path or pwsh path
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -41,7 +41,7 @@
             "name": "Launch without debuging (Powershell)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+            "program": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",     // Change this path to your pwsh or powershell path or pwsh path
             "args": [
                 "-NoExit",
                 "-Command",
