@@ -1,0 +1,102 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            // g++ build active file
+            "label": "g++ build active file (debug)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-Og",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        // without debugging (release mode)
+        {
+            "label": "g++ build active file",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ]
+        },
+        // --------------- Optional ---------------
+        {
+            "label": "g++ build active file (C++20)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "-std=c++20",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ]
+        },
+        {
+            "label": "g++ build active file (C++17)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "g++ build active file (C++14)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "-std=c++14",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ]
+        },
+        {
+            "label": "g++ build active file (C++11)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "-std=c++11",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ]
+        },
+        {
+            "label": "g++ build active file (C++98)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "-std=c++98",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ]
+        }
+    ]
+}

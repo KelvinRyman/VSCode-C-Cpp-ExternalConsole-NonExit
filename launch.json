@@ -1,0 +1,72 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "g++ build active file (debug)",
+            "miDebuggerPath": "D:\\CPP\\mingw64\\bin\\gdb.exe",
+        },
+        {
+            "name": "Launch without debuging",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "g++ build active file (C++17)"
+        },
+        {
+            "name": "Launch without debuging (Powershell)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+            "args": [
+                "-NoExit",
+                "-Command",
+                "\"${workspaceFolder}\\${fileBasenameNoExtension}.exe; Write-Host 'Press Enter to exit...'; Read-Host -AsSecureString; exit\""
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "g++ build active file (C++17)"
+        },
+        // {
+        //     "name": "Launch without debuging (cmd)",
+        //     "type": "cppdbg",
+        //     "request": "launch",
+        //     "program": "C:\\Windows\\System32\\cmd.exe",
+        //     "args": [
+        //         "/k",
+        //         "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+        //     ],
+        //     "stopAtEntry": false,
+        //     "cwd": "${workspaceFolder}",
+        //     "environment": [],
+        //     "externalConsole": true,
+        //     "preLaunchTask": "g++ build active file (C++17)"
+        // }
+    ]
+}
